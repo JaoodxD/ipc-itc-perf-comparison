@@ -22,14 +22,15 @@ const main = async (type, amount) => {
   if (!subWorkerBuilder) return console.error('no sub worker type provided');
   const worker = subWorkerBuilder();
   const stats = [];
-  console.time(type);
+  const start = performance.now();
   for (let i = 0; i < amount; i++) {
     const t1 = performance.now();
     const res = await worker.command();
     const t2 = performance.now();
     stats.push(t2 - t1);
   }
-  console.timeEnd(type);
+  const end = performance.now();
+  console.log(type, normalize(end - start));
   const res = stats.reduce(statsAggregator, null);
   res.max = Math.max(...stats);
   res.min = Math.min(...stats);

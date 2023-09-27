@@ -1,0 +1,23 @@
+{
+  "name": "ipc-itc-perf-comparison",
+  "version": "1.0.0",
+  "description": "",
+  "main": "main.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/JaoodxD/ipc-itc-perf-comparison.git"
+  },
+  "keywords": [],
+  "author": "Maksym Shenderuk <jaood96@gmail.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/JaoodxD/ipc-itc-perf-comparison/issues"
+  },
+  "homepage": "https://github.com/JaoodxD/ipc-itc-perf-comparison#readme",
+  "dependencies": {
+    "statistics": "^3.3.0"
+  }
+}

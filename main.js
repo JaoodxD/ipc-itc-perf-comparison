@@ -6,13 +6,14 @@ const { performance } = require('perf_hooks');
 const args = process.argv.slice(2);
 const amount = parseInt(args[0]) || 1;
 
-const buildWorker = require('./worker_threads/itc.js');
-const buildProcess = require('./child_process/ipc.js');
+// const buildWorker = require('./worker_threads/itc.js');
+// const buildProcess = require('./cases/1-simple/child_process/ipc.js');
 
-const strategy = {
-  ipc: buildProcess,
-  itc: buildWorker
-};
+// const strategy = {
+//   ipc: buildProcess,
+//   itc: buildWorker
+// };
+const strategy = require('./cases/1-simple/index.js');
 
 const main = async (type, amount) => {
   console.log(type, amount);

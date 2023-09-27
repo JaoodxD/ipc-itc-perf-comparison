@@ -1,7 +1,7 @@
 'use strict';
 
 const path = require('path');
-const defer = require('../../lib/deffer.js');
+const defer = require('../../../lib/deffer.js');
 const { Worker } = require('worker_threads');
 const worker_path = path.join(__dirname, 'worker.js');
 

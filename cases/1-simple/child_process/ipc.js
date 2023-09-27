@@ -1,7 +1,7 @@
 'use strict';
 
 const path = require('path');
-const defer = require('../../lib/deffer.js');
+const defer = require('../../../lib/deffer.js');
 const { fork } = require('child_process');
 const process_path = path.join(__dirname, 'child_process.js');
 

@@ -29,7 +29,7 @@ const main = async (type, amount) => {
     stats.push(t2 - t1);
   }
   console.timeEnd(type);
-  const res = stats.reduce(statsAggregator);
+  const res = stats.reduce(statsAggregator, null);
   res.max = Math.max(...stats);
   res.min = Math.min(...stats);
   for (const key in res) {

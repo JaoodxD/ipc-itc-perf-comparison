@@ -2,6 +2,7 @@
 
 const statsAggregator = require('statistics');
 const { performance } = require('perf_hooks');
+const normalize = require('./lib/time.js');
 
 const args = process.argv.slice(2);
 const amount = parseInt(args[0]) || 1;
@@ -34,7 +35,7 @@ const main = async (type, amount) => {
   res.min = Math.min(...stats);
   for (const key in res) {
     if (key === 'count') continue;
-    res[key] = res[key].toFixed(2) + 'ms';
+    res[key] = normalize(res[key]);
   }
   console.table(res);
   worker.close();
